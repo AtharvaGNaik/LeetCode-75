@@ -1,26 +1,34 @@
 class Solution {
     public int compress(char[] chars) {
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < chars.length;) {
+        int index = 0, cnt = 0;
+
+        for (int i = 0; i < chars.length; i++) {
             char c = chars[i];
-            int cnt = 1;
+
             while (i + 1 < chars.length && c == chars[i + 1]) {
                 i++;
                 cnt++;
             }
-            str.append(c);
-            if (cnt > 1) {
-                str.append(cnt);
+
+            chars[index++] = c;
+
+            if (cnt > 0) {
+                char[] countChars = String.valueOf(cnt + 1).toCharArray();
+
+                
+                // char[] countChars = String.valueOf(cnt + 1).toCharArray();: This line converts the count to a string representation and then converts it to a
+                // character array. The +1 is added to include the current character in the count.
+
+                
+                for (int in = 0; in < countChars.length; in++) {
+                    chars[index++] = countChars[in];
+                }
             }
-            i++;
+
+            cnt = 0; // Reset count for the next character
         }
 
-        char[] comp = str.toString().toCharArray();
-        for (int i = 0; i < comp.length; i++) {
-            chars[i] = comp[i];
-        }
-
-        return comp.length;
+        return index;
     }
 }
 
