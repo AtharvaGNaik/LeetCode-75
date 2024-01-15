@@ -15,6 +15,8 @@ class Solution {
             //ADDING TO THE WINDOW
 
             maxsum = Math.max(maxsum, sum);
+
+            //UPDATING THE WHOLE WINDOW AND THE MAXSUM TO GET TO THE NEXT WINDOW
             i++;
         }
         return (double) maxsum / k;
