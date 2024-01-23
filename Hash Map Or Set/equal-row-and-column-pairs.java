@@ -47,24 +47,24 @@ class Solution {
 
 
 
-The intuition behind the code is to iterate through each row of the grid and keep track of the frequency of each row using a map. Then, for each column, construct a temporary array by extracting the elements of the column. Convert this array to a string and check its frequency in the row frequency map. Add the frequency to the total count.
+// The intuition behind the code is to iterate through each row of the grid and keep track of the frequency of each row using a map. Then, for each column, construct a temporary array by extracting the elements of the column. Convert this array to a string and check its frequency in the row frequency map. Add the frequency to the total count.
 
-Approach
-Initialize the count variable to 0 and the size of the grid, n.
-Create a map called rowCounter to keep track of the frequency of each row.
-Iterate through each row of the grid:
-Convert the row array to a string using Arrays.toString().
-Increment the frequency of the row string in the rowCounter map.
-Iterate through each column of the grid:
-Create a temporary array called colArray to store the elements of the column.
-Extract the elements of the column by iterating through the rows and accessing the corresponding element.
-Convert the colArray to a string using Arrays.toString().
-Retrieve the frequency of the column string from the rowCounter map using getOrDefault().
-Add the frequency to the count variable.
-Return the count.
-Complexity
-Time complexity:
-The time complexity of the solution is O(n^2), where n is the size of the grid. The code iterates through each row and column of the grid once, and the operations performed within the loops are constant time.
+// Approach
+// Initialize the count variable to 0 and the size of the grid, n.
+// Create a map called rowCounter to keep track of the frequency of each row.
+// Iterate through each row of the grid:
+// Convert the row array to a string using Arrays.toString().
+// Increment the frequency of the row string in the rowCounter map.
+// Iterate through each column of the grid:
+// Create a temporary array called colArray to store the elements of the column.
+// Extract the elements of the column by iterating through the rows and accessing the corresponding element.
+// Convert the colArray to a string using Arrays.toString().
+// Retrieve the frequency of the column string from the rowCounter map using getOrDefault().
+// Add the frequency to the count variable.
+// Return the count.
+// Complexity
+// Time complexity:
+// The time complexity of the solution is O(n^2), where n is the size of the grid. The code iterates through each row and column of the grid once, and the operations performed within the loops are constant time.
 
-Space complexity:
-The space complexity of the solution is O(n^2). It uses additional space to store the rowCounter map, which can contain up to n^2 entries in the worst case.
+// Space complexity:
+// The space complexity of the solution is O(n^2). It uses additional space to store the rowCounter map, which can contain up to n^2 entries in the worst case.
