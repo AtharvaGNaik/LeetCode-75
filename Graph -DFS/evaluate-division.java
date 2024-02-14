@@ -1,6 +1,9 @@
 
 https://leetcode.com/problems/evaluate-division/submissions/1175177860?envType=study-plan-v2&envId=leetcode-75
 
+THIS SOLUTION IS GOODD   REALLY GOOD  DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+
+
 class Solution {
     public void dfs(String node, String dest, HashMap<String, HashMap<String, Double>> gr, HashSet<String> vis, double[] ans, double temp) {
         if (vis.contains(node))
